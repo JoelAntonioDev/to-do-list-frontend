@@ -1,14 +1,12 @@
 import { useState } from 'react'
 
 import './App.css'
+import Login from './pages/Login'
 
-function App() {
-
+const App: React.FC = () => {
   return (
-    <>
-     <h1>PRIMEIRA PÁGINA</h1>
-    </>
-  )
-}
+    <Login />
+  );
+};
 
 export default App
