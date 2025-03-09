@@ -44,17 +44,29 @@ npm run lint
 📝 Estrutura do Projeto
 
 📦 to-do-list-front
+
 ├── 📂 src
+
 │   ├── 📂 components  # Componentes reutilizáveis
+
 │   ├── 📂 pages       # Páginas principais
+
 │   ├── 📂 services    # Comunicação com a API
+
 │   ├── 📂 styles      # Estilos globais
+
 │   ├── 📜 main.tsx    # Arquivo principal do React
+
 │   ├── 📜 App.tsx     # Configuração das rotas
+
 │   ├── 📜 vite-env.d.ts  # Tipagem do Vite
+
 ├── 📜 package.json    # Dependências e scripts
+
 ├── 📜 tsconfig.json   # Configuração do TypeScript
+
 ├── 📜 vite.config.ts  # Configuração do Vite
+
 └── 📜 README.md       # Este arquivo
 ...
 
