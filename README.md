@@ -1,54 +1,79 @@
-# React + TypeScript + Vite
+📌 To-Do List Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é a interface de um sistema de gerenciamento de tarefas, desenvolvido com React + TypeScript + Vite.
+🚀 Tecnologias Utilizadas
 
-Currently, two official plugins are available:
+    React 19
+    TypeScript
+    Vite
+    React Router
+    ESLint
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📦 Instalação e Execução
 
-## Expanding the ESLint configuration
+Siga os passos abaixo para rodar o projeto localmente:
+1️⃣ Clonar o repositório
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+git clone https://github.com/JoelAntonioDev/to-do-list-frontend.git
+cd to-do-list-frontend
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
+2️⃣ Instalar as dependências
+
+npm install
+
+3️⃣ Executar o projeto
+
+npm run dev
+
+    O projeto será iniciado em http://localhost:5173/.
+
+📜 Scripts Disponíveis
+
+Os seguintes scripts estão disponíveis no package.json:
+Comando	Descrição
+npm run dev	Inicia o servidor de desenvolvimento.
+npm run lint	Analisa e corrige problemas no código com o ESLint.
+🛠️ Configuração do ESLint
+
+Este projeto usa ESLint para manter um código limpo e padronizado.
+Para rodar a verificação manualmente:
+
+npm run lint
+
+📝 Estrutura do Projeto
+
+📦 to-do-list-front
+├── 📂 src
+│   ├── 📂 components  # Componentes reutilizáveis
+│   ├── 📂 pages       # Páginas principais
+│   ├── 📂 services    # Comunicação com a API
+│   ├── 📂 styles      # Estilos globais
+│   ├── 📜 main.tsx    # Arquivo principal do React
+│   ├── 📜 App.tsx     # Configuração das rotas
+│   ├── 📜 vite-env.d.ts  # Tipagem do Vite
+├── 📜 package.json    # Dependências e scripts
+├── 📜 tsconfig.json   # Configuração do TypeScript
+├── 📜 vite.config.ts  # Configuração do Vite
+└── 📜 README.md       # Este arquivo
+...
+
+
+🔗 Backend
+
+Este projecto comunica-se com o backend disponível em:
+🔗 http://localhost:3000
+
+Certifique-se de que a API esteja rodando antes de iniciar o front-end.
+
+🛠️ Personalizações
+
+Caso precise alterar a porta do servidor de desenvolvimento, edite o arquivo vite.config.ts:
+
+export default defineConfig({
+  server: {
+    port: 3001, // Altere a porta conforme necessário
   },
-})
-```
+});
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+📌 Feito com 💙 por Joel António
