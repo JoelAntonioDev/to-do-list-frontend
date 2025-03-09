@@ -15,6 +15,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 1️⃣ Clonar o repositório
 
 git clone https://github.com/JoelAntonioDev/to-do-list-frontend.git
+
 cd to-do-list-frontend
 
 2️⃣ Instalar as dependências
