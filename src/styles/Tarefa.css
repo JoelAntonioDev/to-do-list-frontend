@@ -1,0 +1,60 @@
+
+.tarefa-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.tarefa-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tarefa-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    gap: 8px;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+    flex: 1;
+    max-width: 80%;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.btn-abrir-tarefa, .btn-voltar, .btn-arquivo {
+    background-color: #102f5e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.btn-abrir-tarefa:hover,.btn-voltar:hover , .btn-arquivo:hover{
+    background-color: #0a1f3d;
+}
+
+.arquivo-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}

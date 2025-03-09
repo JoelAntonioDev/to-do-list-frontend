@@ -1,0 +1,73 @@
+/* Estilos gerais */
+.out-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.out-image {
+    width: 60%;
+    background: url('/listas-de-tarefas-significado-1024x576.jpeg') center/cover no-repeat;
+}
+
+.out-form {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.out-box {
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.out-box h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.out-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+.out-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.out-box button:hover {
+    background-color: #0056b3;
+}
+
+.out-box p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.out-box p button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.out-box p button:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,83 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.home-nav {
+    background-color: #007bff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    gap: 15px;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.home-nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.home-nav button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.email {
+    color: white;
+    font-weight: bold;
+}
+
+
+.logout-btn {
+    background-color: red;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background-color: darkred;
+}
+
+/* BODY */
+.home-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.home-body h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.home-body p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* RODAPÉ */
+.home-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
