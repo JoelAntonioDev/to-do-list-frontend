@@ -20,11 +20,11 @@ cd to-do-list-frontend
 
 2️⃣ Instalar as dependências
 
-npm install
+  npm install
 
 3️⃣ Executar o projeto
 
-npm run dev
+  npm run dev
 
     O projeto será iniciado em http://localhost:5173/.
 
@@ -39,7 +39,7 @@ npm run lint	Analisa e corrige problemas no código com o ESLint.
 Este projeto usa ESLint para manter um código limpo e padronizado.
 Para rodar a verificação manualmente:
 
-npm run lint
+  npm run lint
 
 📝 Estrutura do Projeto
 
