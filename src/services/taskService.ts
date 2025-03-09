@@ -16,6 +16,13 @@ interface Arquivo {
     task_id: number,    
     file_url: string;
 }
+
+interface NovaTarefa {
+    titulo: string;
+    descricao: string;
+    status: string
+}
+
 // Função para listar as tarefas
 export const listarTarefa = async (): Promise<taskResponse[]> => {
     try {
@@ -35,8 +42,13 @@ export const listarTarefa = async (): Promise<taskResponse[]> => {
         if (!response.ok) {
             throw new Error(data.error || "Erro ao buscar tarefas");
         }
-
-        return data;
+        return data.map((taskResponse: any) => ({
+            task_id: taskResponse.task_id,
+            titulo: taskResponse.titulo,
+            descricao: taskResponse.descricao,
+            status: taskResponse.status,
+            data_criacao: taskResponse.data_criacao || "", 
+        }));
     } catch (error) {
         console.error("Erro na requisição:", error);
         throw error;
@@ -143,4 +155,49 @@ export const eliminarTarefa = async (taskId: number) => {
         console.error("Erro ao eliminar a tarefa:", error);
         throw error;
     }
+};
+
+export const adicionarTarefa = async (tarefa: NovaTarefa) => {
+    const token = obterCookie("auth_token");
+
+    try {
+        const response = await fetch("http://localhost:3000/tasks/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                ...(token && { "Authorization": token }),
+            },
+            body: JSON.stringify(tarefa),
+        });
+
+        const data = await response.json(); // Lê o JSON da resposta
+
+        if (!response.ok) {
+            throw new Error(data.error || "Erro ao adicionar tarefa");
+        }
+
+        return data; // Retorna a resposta da API
+    } catch (error) {
+        return { error:"Erro desconhecido ao adicionar tarefa" };
+    }
+};
+
+export const atualizarTarefa = async (taskId: number, tarefa: Partial<NovaTarefa>) => {
+    const token = obterCookie("auth_token");
+
+    const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            ...(token && { "Authorization": token }),
+        },
+        body: JSON.stringify(tarefa),
+    });
+
+    if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Erro ao atualizar tarefa");
+    }
+
+    return response.json();
 };

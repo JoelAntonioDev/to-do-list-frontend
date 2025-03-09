@@ -4,8 +4,8 @@ import "../styles/global.css";
 import "../styles/SignUp.css";
 import { SignUpRequest } from "../services/signUpService";
 import Toast from "../components/Toast";
-// Definição do tipo FormData
-interface FormData {
+
+export interface SignUpFormData {
     nome: string;
     sobrenome: string;
     email: string;
@@ -16,7 +16,7 @@ const SignUp: React.FC = () => {
     const navigate = useNavigate();
     const [isMounted, setIsMounted] = useState<boolean>(false);
     const [toast, setToast] = useState<{ message: string, type: 'success' | 'error' | 'warning' } | null>(null);
-    const [formData, setFormData] = useState<FormData>({
+    const [formData, setFormData] = useState<SignUpFormData>({
         nome: "",
         sobrenome: "",
         email: "",
@@ -39,9 +39,9 @@ const SignUp: React.FC = () => {
             const response = await SignUpRequest(formData);
             console.log("Resposta do servidor:", response.message);
             setToast({ message: response.message, type: 'success' });
-            setTimeout(()=>{
+            setTimeout(() => {
                 setFormData({ nome: "", sobrenome: "", email: "", senha: "" });
-            },1000);            
+            }, 1000);
         } catch (err) {
             if (err instanceof Error) {
                 setToast({ message: err.message, type: "error" });
@@ -53,7 +53,8 @@ const SignUp: React.FC = () => {
 
     return (
         <div className="out-container">
-            {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}            <div className="out-image"></div>
+            {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
+            <div className="out-image"></div>
             <div className="out-form">
                 <div className="out-box">
                     <h1>Criação de Conta</h1>
