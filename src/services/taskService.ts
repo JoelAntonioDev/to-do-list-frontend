@@ -201,3 +201,29 @@ export const atualizarTarefa = async (taskId: number, tarefa: Partial<NovaTarefa
 
     return response.json();
 };
+
+export const uploadArquivo = async (taskId: number, formData: FormData) => {
+    const token = obterCookie("auth_token");
+
+    try {
+        const response = await fetch(`http://localhost:3000/tasks/${taskId}/upload`, {
+            method: "POST",
+            headers: {
+                ...(token && { "Authorization": token }), 
+            },
+            body: formData, 
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.error || "Erro ao enviar arquivo");
+        }
+
+        return data; 
+    } catch (error) {
+        console.error("Erro no upload do arquivo:", error);
+        throw error;
+    }
+};
+

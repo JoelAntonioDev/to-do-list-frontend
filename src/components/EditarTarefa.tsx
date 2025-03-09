@@ -27,7 +27,7 @@ const EditarTarefa: React.FC<EditarTarefaProps> = ({ tarefa, onClose, onUpdate }
         
         try {
             await atualizarTarefa(tarefa.task_id, { titulo, descricao, status });
-            onUpdate(); // 🔹 Agora só chamamos onUpdate() sem passar a tarefa
+            onUpdate();
         } catch (error) {
             console.error("Erro ao atualizar a tarefa:", error);
             setToast({ message: "Erro ao atualizar tarefa", type: "error" });
