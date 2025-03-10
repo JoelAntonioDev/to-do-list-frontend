@@ -52,7 +52,7 @@ const EditarTarefa: React.FC<EditarTarefaProps> = ({ tarefa, onClose, onUpdate }
                     <label>Status:</label>
                     <select value={status} onChange={(e) => setStatus(e.target.value)}>
                         <option value="pendente">Pendente</option>
-                        <option value="em progresso">Em Progresso</option>
+                        <option value="em andamento">Em Andamento</option>
                         <option value="concluído">Concluído</option>
                     </select>
                 </div>

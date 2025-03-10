@@ -4,7 +4,7 @@ import "../styles/Tarefa.css";
 import TarefaDetalhe from "./TarefaDetalhe";
 import EditarTarefa from "./EditarTarefa";
 import Toast from "./Toast";
-
+import {Eye, Edit,Trash2 } from "lucide-react";
 interface Tarefa {
     task_id: number;
     titulo: string;
@@ -17,7 +17,12 @@ const ListaTarefa: React.FC = () => {
     const [tarefaSelecionada, setTarefaSelecionada] = useState<Tarefa | null>(null);
     const [tarefaEditando, setTarefaEditando] = useState<Tarefa | null>(null);
     const [toast, setToast] = useState<{ message: string; type: "success" | "error" | "warning" } | null>(null);
-
+    const statusCores: { [key: string]: string } = {
+        "pendente": "#e57373",   
+        "em andamento": "#ffb74d", 
+        "concluído": "#81c784"    
+    };
+    
     const fetchTarefas = async () => {
         try {
             const response = await listarTarefa();
@@ -50,7 +55,7 @@ const ListaTarefa: React.FC = () => {
 
     return (
         <div className="tarefa-container">
-            <h1>Lista de Tarefas</h1>
+            <h1 className="title-lista-tarefas">Lista de Tarefas</h1>
             {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
             
             {tarefaSelecionada ? (
@@ -58,6 +63,7 @@ const ListaTarefa: React.FC = () => {
                     tarefa={tarefaSelecionada} 
                     onClose={() => setTarefaSelecionada(null)} 
                 />
+                
             ) : tarefaEditando ? (
                 <EditarTarefa 
                     tarefa={tarefaEditando} 
@@ -71,25 +77,25 @@ const ListaTarefa: React.FC = () => {
             ) : (
                 <ul className="tarefa-list">
                     {tarefas.map((tarefa) => (
-                        <li className="tarefa-item" key={tarefa.task_id}>
+                        <li className="tarefa-item" key={tarefa.task_id} style={{ backgroundColor: statusCores[tarefa.status.toLowerCase()] || "white" }}>
                             <h3 className="titulo">{tarefa.titulo}</h3>
                             <button 
                                 className="btn-abrir-tarefa"
                                 onClick={() => setTarefaSelecionada(tarefa)}
                             >
-                                Ver
+                                <Eye size={16} />
                             </button>
                             <button 
                                 className="btn-editar-tarefa"
                                 onClick={() => setTarefaEditando(tarefa)}
                             >
-                                Editar
+                                <Edit size={16}/>
                             </button>
                             <button 
                                 className="btn-eliminar-tarefa"
                                 onClick={() => handleRemoverTarefa(tarefa.task_id)}
                             >
-                                Eliminar
+                                <Trash2 size={16}/>
                             </button>
                         </li>
                     ))}

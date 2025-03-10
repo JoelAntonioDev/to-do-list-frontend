@@ -81,3 +81,25 @@
     padding: 10px;
     font-size: 0.9rem;
 }
+
+.btn-eliminar-arquivo{
+    background-color: #e93434;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.btn-eliminar-arquivo:hover{
+    background-color: #ac2525;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}

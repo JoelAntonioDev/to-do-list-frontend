@@ -49,6 +49,13 @@ h1 {
     transition: background 0.3s;
 }
 
+.btn-eliminar-tarefa{
+    background-color: #e93434;
+}
+.btn-eliminar-tarefa:hover{
+    background-color: #ac2525;
+}
+
 .btn-abrir-tarefa:hover,.btn-voltar:hover , .btn-arquivo:hover{
     background-color: #0a1f3d;
 }
@@ -58,4 +65,35 @@ h1 {
     display: flex;
     flex-direction: column;
     gap:8px;
+}
+
+.tarefa-detalhe-container{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.upload-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px dashed #3a6ea5; /* Borda tracejada como no Google Drive */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.upload-input:hover {
+    border-color: #0a1f3d;
+    background-color: #e3e6ea;
+}
+
+.upload-input:focus {
+    border-color: #ff9800;
+    background-color: #fff3e0;
 }

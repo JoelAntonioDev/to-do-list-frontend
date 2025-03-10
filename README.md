@@ -4,10 +4,11 @@ Este projeto é a interface de um sistema de gerenciamento de tarefas, desenvolv
 🚀 Tecnologias Utilizadas
 
     React 19
-    TypeScript
-    Vite
+    TypeScript é um superset do JavaScript que fortemente tipado, garantindo maior segurança no código.
+    Vite é um build tool para projetos frontend que oferece um ambiente de desenvolvimento extremamente rápido.
     React Router
-    ESLint
+    ESLint 
+    Lucide React é uma biblioteca de ícones modernos e personalizáveis para React.
 
 📦 Instalação e Execução
 
@@ -28,18 +29,13 @@ Siga os passos abaixo para rodar o projeto localmente:
 
     O projeto será iniciado em http://localhost:5173/.
 
-📜 Scripts Disponíveis
-
-Os seguintes scripts estão disponíveis no package.json:
-Comando	Descrição
-npm run dev	Inicia o servidor de desenvolvimento.
-npm run lint	Analisa e corrige problemas no código com o ESLint.
-🛠️ Configuração do ESLint
-
-Este projeto usa ESLint para manter um código limpo e padronizado.
-Para rodar a verificação manualmente:
-
-    npm run lint
+Funcionalidades Implementadas:
+    Listagem de Tarefas: Exiba todas as tarefas cadastradas.
+    Criação e Edição: Formulário para criar e editar tarefas.
+    Exclusão: Botão para remover tarefas.
+    Upload de Arquivos: Permitir que o usuário anexe arquivos a uma tarefa.
+    Listagem e Remoção de Arquivos: Mostrar os arquivos já anexados e possibilitar a exclusão.
+    Feedback Visual: Estados de carregamento e mensagens de erro/sucesso
 
 📝 Estrutura do Projeto
 
