@@ -41,7 +41,7 @@
 .out-box button {
     width: 100%;
     padding: 12px;
-    background-color: #007bff;
+    background-color: #3a6ea5;
     color: white;
     border: none;
     border-radius: 5px;
@@ -53,6 +53,7 @@
 
 .out-box button:hover {
     background-color: #0056b3;
+    color: white;
 }
 
 .out-box p {
@@ -63,7 +64,7 @@
 .out-box p button {
     background: none;
     border: none;
-    color: #007bff;
+    color: #3a6ea5;
     cursor: pointer;
     font-size: 1rem;
 }

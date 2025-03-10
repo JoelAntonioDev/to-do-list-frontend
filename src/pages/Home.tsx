@@ -8,7 +8,7 @@ import Principal from "../components/Principal";
 const Home: React.FC = () => {
     const navigate = useNavigate();
     const email = localStorage.getItem("email") || "Usuário";
-    const [activeComponent, setActiveComponent] = useState<string>("welcome"); // Estado para definir o componente ativo
+    const [activeComponent, setActiveComponent] = useState<string>("welcome");
 
     const handleLogout = () => {
         localStorage.removeItem("token");

@@ -3,7 +3,8 @@
     background-color: #f0f0f0;
     padding: 20px;
     border-radius: 8px;
-    max-width: 600px;
+    width: 650px;
+    max-width: 700px;
     margin: 20px auto;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -37,8 +38,8 @@ h1 {
     white-space: normal;
 }
 
-.btn-abrir-tarefa, .btn-voltar, .btn-arquivo {
-    background-color: #102f5e;
+.btn-abrir-tarefa, .btn-voltar, .btn-arquivo, .btn-editar-tarefa, .btn-eliminar-tarefa {
+    background-color: #3a6ea5;
     color: white;
     border: none;
     padding: 5px 10px;
