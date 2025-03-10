@@ -37,6 +37,7 @@ Funcionalidades Implementadas:
     Listagem e Remoção de Arquivos: Mostrar os arquivos já anexados e possibilitar a exclusão.
     Feedback Visual: Estados de carregamento e mensagens de erro/sucesso
 
+Utilizou-se também Hooks(useState, useEffect) para gerenciamento de estado. E temos uma interface amigável e responsiva
 📝 Estrutura do Projeto
 
 📦 to-do-list-front
