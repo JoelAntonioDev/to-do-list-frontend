@@ -25,7 +25,6 @@ const Home: React.FC = () => {
                     <button onClick={() => setActiveComponent("tasks")}>Ver Tarefas</button>
                 </div>
                 <div className="nav-right">
-                    <span className="email">{email}</span>
                     <button className="logout-btn" onClick={handleLogout}>Sair</button>
                 </div>
             </nav>
